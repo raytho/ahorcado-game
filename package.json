@@ -1,0 +1,15 @@
+{
+  "name": "ahorcado",
+  "version": "1.0.0",
+  "description": "juego ahorcado",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "ahorcado-game"
+  },
+  "author": "raysp",
+  "license": "ISC"
+}
