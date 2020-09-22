@@ -1,0 +1,132 @@
+body {
+  background-color: lightgray;
+  color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 80vh;
+  margin: 0;
+  overflow: hidden;
+}
+
+.game {
+  position: relative;
+  margin: auto;
+  width: 95vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.hangman__container {
+  fill: transparent;
+  stroke: #fff;
+  stroke-width: 4px;
+  stroke-linecap: round;
+}
+
+.hangman__part {
+  display: none;
+}
+
+.word {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10rem;
+}
+
+.letter {
+  border-bottom: 3px solid white;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 10px;
+  font-size: 50px;
+  width: 20px;
+  height: 50px;
+}
+
+.keyboard {
+  display: grid;
+  grid-template-columns: repeat(13, 1fr);
+  gap: 15px;
+  justify-items: center;
+}
+
+.keyboard__key {
+  background-color: grey;
+  padding: 1rem;
+  cursor: pointer;
+}
+
+.keyboard__key--used {
+  background-color: #233f3c;
+}
+
+.pop-up {
+  position: fixed;
+  top: 25%;
+  left: 50%;
+  transform: scale(0);
+  width: 500px;
+  height: 300px;
+  border: 2px solid #fff;
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.8);
+  transition: transform 0.4s;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 50px;
+  color: #fff;
+}
+
+.pop-up__text {
+  margin: 0;
+  margin-bottom: 2rem;
+}
+
+.pop-up__button {
+  padding: 1rem;
+  width: 300px;
+  font-size: 20px;
+}
+
+.pop-up--show {
+  transform: translateX(-50%) scale(1);
+}
+
+.score {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.2);
+  width: 250px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-items: center;
+  font-size: 1.5rem;
+}
+
+.score__text {
+  grid-column: 1/3;
+  margin: 1rem 0;
+}
+
+.button-help {
+  background: none;
+  border: 1px solid #fff;
+  outline: none;
+  background-color: #427773;
+  padding: 0.8rem 0;
+  width: 100px;
+  margin: 2rem auto;
+  display: block;
+  color: #fff;
+  cursor: pointer;
+}
+
+.button-help:active {
+  transform: scale(0.9);
+}
